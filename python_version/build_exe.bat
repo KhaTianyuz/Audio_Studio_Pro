@@ -39,6 +39,9 @@ if exist "app_icon.ico" (
 if exist "DISCLAIMER.md" (
     if exist "dist\AudioStudioPro" copy /y "DISCLAIMER.md" "dist\AudioStudioPro\DISCLAIMER.md" >nul
 )
+if exist "..\LICENSE" (
+    if exist "dist\AudioStudioPro" copy /y "..\LICENSE" "dist\AudioStudioPro\LICENSE" >nul
+)
 
 if %errorlevel% neq 0 (
     echo.

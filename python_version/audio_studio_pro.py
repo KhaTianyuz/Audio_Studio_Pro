@@ -132,12 +132,16 @@ def get_app_root_dir() -> Path:
 
 
 
-DISCLAIMER_DOCUMENT_TEXT = """【Audio Studio Pro 软件使用免责协议与风险告知书 (DISCLAIMER.md)】
+DISCLAIMER_DOCUMENT_TEXT = """【Audio Studio Pro 软件免责协议、开源许可证与第三方致谢声明 (DISCLAIMER.md)】
 
-重要提示：在使用本软件（Audio Studio Pro，含 Python 版本、C++ 版本及打包后的可执行程序）之前，请您务必仔细阅读以下全部免责条款。您勾选“我已阅读 DISCLAIMER.md 并遵守以下协议”或以任何方式运行、使用、修改、传播本软件，即视为已完全理解并无条件同意本协议全部内容：
+重要提示：在使用本软件（Audio Studio Pro，含 Python 版、C++20 版及打包后的 .exe 可执行程序）之前，请您务必仔细阅读以下全部免责条款与开源协议说明。您勾选“我已阅读 DISCLAIMER.md 并遵守以上全部免责/开源协议条款”或以任何方式运行、使用、修改、传播本软件，即视为已完全理解并无条件同意本协议全部内容：
+
+========================================================================
+第一部分：软件使用免责协议与风险告知书 (Disclaimer of Liability)
+========================================================================
 
 第一条 【完全自担风险原则】
-本软件系开源免费工具，仅供个人学习、声学实验与音乐欣赏交流使用。用户下载、安装、运行、操作本软件纯属个人自愿行为。使用本软件过程中或因使用本软件而产生的任何直接、间接、偶然、特殊或衍生的一切后果、损失与风险，均由用户本人独立承担，与本软件作者无任何关系，作者不承担任何法律或经济责任。
+本软件系开源免费工具（官方开源仓库：https://github.com/KhaTianyuz/Audio_Studio_Pro），仅供个人学习、声学实验与音乐欣赏交流使用。用户下载、安装、运行、操作本软件纯属个人自愿行为。使用本软件过程中或因使用本软件而产生的任何直接、间接、偶然、特殊或衍生的一切后果、损失与风险，均由用户本人 100% 独立承担，与本软件作者无任何关系，作者不承担任何法律或经济责任。
 
 第二条 【听力安全与音响/耳机硬件损坏免责】
 本软件具备实时均衡器增益调节（最高 +24dB）、自定义数学函数波发生器、多振荡器合成及极端低频/高频声波生成功能。若因用户将音量调得过高、大幅拉高增益、输入剧烈振荡公式或在佩戴耳机/连接外置喇叭时操作不当，导致喇叭劈响、振膜破损、功放/声卡/耳机硬件烧毁，或造成用户及他人耳鸣、听力下降等健康损害，一切后果均由用户自行承担，与作者无关。建议首次调试时先将电脑音量调低并摘下耳机。
@@ -146,7 +150,7 @@ DISCLAIMER_DOCUMENT_TEXT = """【Audio Studio Pro 软件使用免责协议与风
 本软件内置的“音频格式自动转换”、“音频重采样导出”以及“录制电脑系统声音”功能，仅限用于用户拥有合法权利的音频素材或个人学习研究。用户不得利用本软件盗录、破解、非法转换或传播受著作权法保护的商业音乐、流媒体内容或他人隐私语音。因用户违反知识产权法律法规或侵犯第三方权益所引发的一切民事纠纷、行政处罚或刑事责任，均由用户本人全权负责，与本软件作者无关。
 
 第四条 【文件同名覆盖与数据安全免责】
-为保障兼容性，当您向本软件导入非 WAV 格式的音乐文件（如 .mp3、.flac、.ogg、.m4a 等）时，软件会自动在原文件同一文件夹下转换并覆盖生成同名的 .wav 文件（例如导入 song.mp3 会自动覆盖生成同目录下的 song.wav）。请勿将重要原始 `.wav` 母带文件与待转换文件同名混放。因同名文件覆盖、误操作、磁盘读写异常或程序中断导致的任何文件丢失、数据损坏，作者概不负责。
+为保障兼容性，当您向本软件导入非 WAV 格式的音乐文件（如 .mp3、.flac、.ogg、.m4a 等）时，软件会自动在原文件同一文件夹下转换并覆盖生成同名的 .wav 文件（例如导入 song.mp3 会自动覆盖生成同目录下的 song.wav）。请勿将重要原始 .wav 母带文件与待转换文件同名混放。因同名文件覆盖、误操作、磁盘读写异常或程序中断导致的任何文件丢失、数据损坏，作者概不负责。
 
 第五条 【系统兼容性、驱动冲突与设备故障免责】
 本软件不保证在所有 Windows 操作系统版本、声卡硬件、虚拟音频驱动、蓝牙音频设备或第三方安全软件环境下均能正常、无故障地运行。若因运行本软件引发音频卡顿、爆音、程序闪退、系统死机、蓝屏或与其他软件发生冲突，由此造成的任何工作中断或数据损失，均与作者无关。
@@ -158,7 +162,36 @@ DISCLAIMER_DOCUMENT_TEXT = """【Audio Studio Pro 软件使用免责协议与风
 本软件基于 GNU AGPL v3.0 协议开源。任何第三方个人或机构对本软件进行打包、修改、分发或商业/非商业使用时，其行为仅代表该第三方自身，不代表原作者立场。因第三方修改版、捆绑版或分发渠道引起的任何木马病毒、安全隐患或法律纠纷，与原作者无任何关联。
 
 第八条 【放弃追索权与协议生效】
-一旦您勾选同意并继续使用本软件，即表示您永久且不可撤销地放弃因使用本软件而向软件作者提起任何索赔、诉讼、仲裁或追偿的权利。如果您不同意本免责协议中的任何一条内容，请立即点击“不同意并退出”并彻底删除本软件全部文件。
+一旦您勾选同意并继续使用本软件，即表示您永久且不可撤销地放弃因使用本软件而向软件作者提起任何索赔、诉讼、仲裁或追偿的权利。如果您不同意本协议中的任何一条内容，请立即点击“不同意并退出”并彻底删除本软件全部文件。
+
+========================================================================
+第二部分：开源协议说明与第三方开源组件致谢 (Open-Source Licenses & Credits)
+========================================================================
+
+一、【本项目主开源协议：GNU AGPL v3.0】
+1. 本项目主程序核心代码（含 FFT 超分辨寻峰、RBJ Biquad 参量均衡器、跨块相位连续 WSOLA 倍速算法、5.1/7.1 环绕声矩阵上混引擎、逆波兰字节码数学公式引擎、88 键钢琴跟谱控件、原生 WASAPI 虚拟内录引擎及 RFC 9639 原生 FLAC/WAV 编码器等）均为项目原创自研代码，基于 GNU Affero General Public License v3.0 (AGPL-3.0) 协议开源（详见根目录 LICENSE 文件）。
+2. 您可以自由运行、复制、修改本软件及分发构建后的 .exe 可执行程序；若您修改了本软件源码、发布了衍生作品或通过网络提供服务，必须以相同的 AGPL-3.0 协议公开完整修改版源码，并保留原作者版权声明与本免责/开源协议。
+
+二、【致谢：本项目使用的第三方开源组件及遵守的开源协议】
+本项目的开发与运行得益于以下优秀的第三方开源项目，特此向所有开源作者与贡献者致谢，并严格遵守其开源许可证要求保留版权声明：
+
+1. C++20 原生版 (cpp_version/) 第三方开源库：
+   - Dear ImGui (v1.90.8) | 作者: Omar Cornut and contributors | 协议: MIT License (https://github.com/ocornut/imgui)
+   - ImPlot (v0.16) | 作者: Evan Pezent | 协议: MIT License (https://github.com/epezent/implot)
+   - miniaudio (v0.11.21 接口规范) | 原作者: David Reid (mackron) | 协议: Public Domain / MIT-0 (https://github.com/mackron/miniaudio)
+
+2. Python 版 (python_version/) 第三方开源库：
+   - PyQt6 | 版权: Riverbank Computing Limited / The Qt Company | 协议: GNU GPL v3.0 (与本项目 AGPL-3.0 协议兼容)
+   - pyqtgraph | 作者: Luke Campagnola and contributors | 协议: MIT License
+   - NumPy & SciPy | 版权: NumPy & SciPy Developers | 协议: BSD-3-Clause License
+   - PyAudioWPatch | 作者: Hubert Pham / s0d3s | 协议: MIT License (https://github.com/s0d3s/PyAudioWPatch)
+   - sounddevice | 作者: Matthias Geier | 协议: MIT License
+   - soundfile (libsndfile) | 作者: Bastian Bechtold | 协议: BSD-3-Clause / LGPL-2.1+
+   - imageio-ffmpeg & FFmpeg | 版权: Almar Klein / FFmpeg Developers | 协议: BSD-2-Clause / LGPLv2.1+ (独立子进程转码调用)
+   - PyInstaller | 版权: PyInstaller Development Team | 协议: GPLv2+ with Bootloader Exception
+
+3. MIT / BSD 第三方组件标准免责与许可声明：
+   上述 MIT 与 BSD-3-Clause 协议授权的第三方组件均由其各自版权持有人按“原样 (AS IS)”免费提供许可，不附带任何明示或暗示的担保。完整许可证声明详见程序目录下的 DISCLAIMER.md 与 LICENSE 文件。
 """
 
 
@@ -664,7 +697,9 @@ class UniversalAudioFormatConverter:
         elif audio.shape[1] == 1:
             audio = np.column_stack([audio[:, 0], audio[:, 0]])
         elif audio.shape[1] > 2:
-            audio = audio[:, :2]
+            audio = SystemLoopbackCapture._downmix_multichannel_to_stereo(
+                audio.reshape(-1), audio.shape[1]
+            )
 
         return np.clip(audio, -1.0, 1.0).astype(np.float32)
 
@@ -683,23 +718,41 @@ class UniversalAudioFormatConverter:
         target_channels: int = 2,
         bitrate: str = "192k",
     ) -> str:
+        effective_sr = int(orig_sr) if int(target_sr) <= 0 else int(target_sr)
         processed = AudioDSPEngine.offline_resample(
-            audio_data, orig_sr, target_sr, target_bit_depth, target_channels
+            audio_data, orig_sr, effective_sr, target_bit_depth, target_channels
         )
 
         ext = os.path.splitext(output_path)[1].lower()
+        if not ext:
+            output_path = output_path + ".wav"
+            ext = ".wav"
+
         if ext == ".wav":
             UniversalAudioFormatConverter._write_wav_native(
-                output_path, processed, target_sr, target_bit_depth
+                output_path, processed, effective_sr, target_bit_depth
             )
             return output_path
 
-        if HAS_SOUNDFILE and ext in (".flac", ".ogg", ".mp3"):
-            try:
-                subtype = None
-                if ext == ".flac":
+        if ext == ".flac":
+            if HAS_SOUNDFILE:
+                try:
                     subtype = "PCM_24" if target_bit_depth >= 24 else "PCM_16"
-                sf.write(output_path, processed, target_sr, subtype=subtype)
+                    with open(output_path, "wb") as fh:
+                        sf.write(fh, processed, effective_sr, format="FLAC", subtype=subtype)
+                    return output_path
+                except Exception:
+                    pass
+            UniversalAudioFormatConverter._write_flac_native(
+                output_path, processed, effective_sr, target_bit_depth
+            )
+            return output_path
+
+        if HAS_SOUNDFILE and ext in (".ogg", ".mp3"):
+            try:
+                fmt_map = {".ogg": "OGG", ".mp3": "MP3"}
+                with open(output_path, "wb") as fh:
+                    sf.write(fh, processed, effective_sr, format=fmt_map[ext])
                 return output_path
             except Exception:
                 pass
@@ -708,7 +761,7 @@ class UniversalAudioFormatConverter:
         if not ffmpeg_bin:
             fallback_wav = str(Path(output_path).with_suffix(".wav"))
             UniversalAudioFormatConverter._write_wav_native(
-                fallback_wav, processed, target_sr, target_bit_depth
+                fallback_wav, processed, effective_sr, target_bit_depth
             )
             return fallback_wav
 
@@ -717,7 +770,7 @@ class UniversalAudioFormatConverter:
 
         try:
             UniversalAudioFormatConverter._write_wav_native(
-                tmp_wav, processed, target_sr, target_bit_depth
+                tmp_wav, processed, effective_sr, target_bit_depth
             )
             creation_flags = subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0
             cmd = [
@@ -726,13 +779,13 @@ class UniversalAudioFormatConverter:
                 "-i",
                 tmp_wav,
                 "-ar",
-                str(target_sr),
+                str(effective_sr),
                 "-ac",
                 str(target_channels),
-                "-b:a",
-                bitrate,
-                output_path,
             ]
+            if ext in (".mp3", ".ogg", ".m4a", ".aac", ".wma", ".opus"):
+                cmd.extend(["-b:a", bitrate])
+            cmd.append(output_path)
             proc = subprocess.run(
                 cmd,
                 stdout=subprocess.PIPE,
@@ -750,6 +803,118 @@ class UniversalAudioFormatConverter:
                     os.remove(tmp_wav)
                 except OSError:
                     pass
+
+    @staticmethod
+    def _crc8_flac(data: bytes) -> int:
+        crc = 0
+        for b in data:
+            crc ^= b
+            for _ in range(8):
+                crc = ((crc << 1) ^ 0x07) & 0xFF if (crc & 0x80) else (crc << 1) & 0xFF
+        return crc
+
+    _FLAC_CRC16_TABLE: Optional[List[int]] = None
+
+    @staticmethod
+    def _crc16_flac(data: bytes) -> int:
+        if UniversalAudioFormatConverter._FLAC_CRC16_TABLE is None:
+            tbl: List[int] = []
+            for i in range(256):
+                c = i << 8
+                for _ in range(8):
+                    c = ((c << 1) ^ 0x8005) & 0xFFFF if (c & 0x8000) else (c << 1) & 0xFFFF
+                tbl.append(c)
+            UniversalAudioFormatConverter._FLAC_CRC16_TABLE = tbl
+        table = UniversalAudioFormatConverter._FLAC_CRC16_TABLE
+        crc = 0
+        for b in data:
+            crc = ((crc << 8) & 0xFFFF) ^ table[((crc >> 8) ^ b) & 0xFF]
+        return crc
+
+    @staticmethod
+    def _encode_flac_utf8_int(val: int) -> bytes:
+        if val < 0x80:
+            return bytes([val])
+        elif val < 0x800:
+            return bytes([0xC0 | (val >> 6), 0x80 | (val & 0x3F)])
+        elif val < 0x10000:
+            return bytes([0xE0 | (val >> 12), 0x80 | ((val >> 6) & 0x3F), 0x80 | (val & 0x3F)])
+        elif val < 0x200000:
+            return bytes([
+                0xF0 | (val >> 18),
+                0x80 | ((val >> 12) & 0x3F),
+                0x80 | ((val >> 6) & 0x3F),
+                0x80 | (val & 0x3F),
+            ])
+        return bytes([
+            0xF8 | (val >> 24),
+            0x80 | ((val >> 18) & 0x3F),
+            0x80 | ((val >> 12) & 0x3F),
+            0x80 | ((val >> 6) & 0x3F),
+            0x80 | (val & 0x3F),
+        ])
+
+    @staticmethod
+    def _write_flac_native(
+        output_path: str, audio: np.ndarray, sr: int, bit_depth: int = 16
+    ) -> None:
+        bps = 24 if bit_depth >= 24 else 16
+        arr = np.asarray(audio, dtype=np.float32)
+        if arr.ndim == 1:
+            arr = arr[:, None]
+        n_frames, n_ch = arr.shape
+        n_ch = min(2, max(1, n_ch))
+        arr = np.clip(arr[:, :n_ch], -1.0, 1.0)
+        if bps == 16:
+            pcm = np.round(arr * 32767.0).astype(np.int16)
+        else:
+            pcm = np.round(arr * 8388607.0).astype(np.int32)
+
+        block_size = 4096
+        st = bytearray(34)
+        st[0:2] = block_size.to_bytes(2, "big")
+        st[2:4] = block_size.to_bytes(2, "big")
+        packed64 = (
+            ((int(sr) & 0xFFFFF) << 44)
+            | (((n_ch - 1) & 0x7) << 41)
+            | (((bps - 1) & 0x1F) << 36)
+            | (n_frames & 0xFFFFFFFFF)
+        )
+        st[10:18] = packed64.to_bytes(8, "big")
+
+        ch_assign = 0 if n_ch == 1 else 1
+        bps_code = 0b100 if bps == 16 else 0b110
+
+        with open(output_path, "wb") as fh:
+            fh.write(bytes([0x66, 0x4C, 0x61, 0x43, 0x80, 0x00, 0x00, 0x22]))
+            fh.write(st)
+
+            frame_idx = 0
+            for start in range(0, n_frames, block_size):
+                chunk = pcm[start : start + block_size]
+                cur_len = chunk.shape[0]
+                hdr = bytearray([0xFF, 0xF8])
+                hdr.append((0b0111 << 4) | 0b0000)
+                hdr.append((ch_assign << 4) | (bps_code << 1) | 0)
+                hdr.extend(UniversalAudioFormatConverter._encode_flac_utf8_int(frame_idx))
+                hdr.extend((cur_len - 1).to_bytes(2, "big"))
+                hdr.append(UniversalAudioFormatConverter._crc8_flac(hdr))
+
+                frame_buf = bytearray(hdr)
+                for ch in range(n_ch):
+                    frame_buf.append(0x02)  # Subframe header: Verbatim, 0 wasted bits
+                    col = chunk[:, ch]
+                    if bps == 16:
+                        frame_buf.extend(col.astype(">i2").tobytes())
+                    else:
+                        be4 = col.astype(">i4").tobytes()
+                        b24 = np.frombuffer(be4, dtype=np.uint8).reshape(-1, 4)[:, 1:4].tobytes()
+                        frame_buf.extend(b24)
+
+                f_crc16 = UniversalAudioFormatConverter._crc16_flac(frame_buf)
+                frame_buf.extend(f_crc16.to_bytes(2, "big"))
+                fh.write(frame_buf)
+                frame_idx += 1
 
     @staticmethod
     def _write_wav_native(
@@ -787,20 +952,54 @@ class UniversalAudioFormatConverter:
 
 class StatefulOverlapAddEQ:
     """
-    解决“均衡器低音调高时喇叭有劈响/破音”的专用状态连续滤波器：
-    采用双正弦窗 (Sine / Root-Hann Window, sin^2(x) + cos^2(x) = 1.0) 的 50% 重叠相加 (WOLA)
-    + 自动动态余量补偿与软膝限幅器。
+    64-bit 双精度 10 段级联 RBJ Biquad 状态连续参量均衡器：
+    1. 当均衡器曲线处于 0dB 平坦状态时，执行 100% 比特级直通，零延迟、零染色；
+    2. 当调整频段增益时，使用双精度二阶节 (SOS) 级联滤波，彻底消除 FFT 窗预振铃造成的人声发闷与瞬态模糊。
     """
+
+    ISO_FREQS = np.array([31.0, 62.0, 125.0, 250.0, 500.0, 1000.0, 2000.0, 4000.0, 8000.0, 16000.0], dtype=np.float64)
 
     def __init__(self, block_size: int = 2048, channels: int = 2) -> None:
         self.block_size = block_size
         self.channels = channels
-        self._prev_in = np.zeros((block_size, channels), dtype=np.float32)
-        self._ola_tail = np.zeros((block_size // 2, channels), dtype=np.float32)
+        self._zi = np.zeros((len(self.ISO_FREQS), 2, channels), dtype=np.float64)
 
     def reset(self) -> None:
-        self._prev_in.fill(0.0)
-        self._ola_tail.fill(0.0)
+        self._zi.fill(0.0)
+
+    @classmethod
+    def build_sos_matrix(cls, sample_rate: int, eq_points: List[List[float]]) -> Tuple[np.ndarray, float]:
+        band_gains_db = AudioDSPEngine.evaluate_smooth_curve_db(
+            eq_points, cls.ISO_FREQS, min_db=-24.0, max_db=24.0
+        )
+        max_boost = float(np.max(band_gains_db))
+        headroom_db = -(max_boost - 1.5) * 0.75 if max_boost > 1.5 else 0.0
+        pre_gain = float(10.0 ** (headroom_db / 20.0))
+
+        sr_d = float(max(8000, int(sample_rate)))
+        sos = np.zeros((len(cls.ISO_FREQS), 6), dtype=np.float64)
+        sos[:, 0] = 1.0
+        sos[:, 3] = 1.0
+
+        Q = 1.00
+        for i, (f0, db) in enumerate(zip(cls.ISO_FREQS, band_gains_db)):
+            if abs(float(db)) < 0.03 or f0 >= sr_d * 0.475:
+                continue
+            A = 10.0 ** (float(db) / 40.0)
+            w0 = 2.0 * math.pi * float(f0) / sr_d
+            cos_w0 = math.cos(w0)
+            sin_w0 = math.sin(w0)
+            alpha = sin_w0 / (2.0 * Q)
+
+            b0 = 1.0 + alpha * A
+            b1 = -2.0 * cos_w0
+            b2 = 1.0 - alpha * A
+            a0 = 1.0 + alpha / A
+            a1 = -2.0 * cos_w0
+            a2 = 1.0 - alpha / A
+            inv_a0 = 1.0 / a0
+            sos[i] = [b0 * inv_a0, b1 * inv_a0, b2 * inv_a0, 1.0, a1 * inv_a0, a2 * inv_a0]
+        return sos, pre_gain
 
     def process_block(
         self,
@@ -811,62 +1010,25 @@ class StatefulOverlapAddEQ:
         if audio_block.size == 0 or not eq_points:
             return audio_block
 
-        work = audio_block.astype(np.float32)
-        if work.ndim == 1:
+        max_abs_pt = max((abs(float(p[1])) for p in eq_points), default=0.0)
+        if max_abs_pt < 0.05:
+            return audio_block
+
+        work = audio_block.astype(np.float64)
+        was_1d = work.ndim == 1
+        if was_1d:
             work = np.column_stack([work, work])
 
-        n_frames, n_ch = work.shape
-        if n_frames != self.block_size or n_ch != self.channels:
-            self.block_size = n_frames
-            self.channels = n_ch
-            self._prev_in = np.zeros((n_frames, n_ch), dtype=np.float32)
-            self._ola_tail = np.zeros((n_frames // 2, n_ch), dtype=np.float32)
+        _, n_ch = work.shape
+        if self._zi.shape[2] != n_ch:
+            self._zi = np.zeros((len(self.ISO_FREQS), 2, n_ch), dtype=np.float64)
 
-        half = n_frames // 2
-        freqs = np.fft.rfftfreq(n_frames, d=1.0 / float(sample_rate))
-        gain_db = AudioDSPEngine.evaluate_smooth_curve_db(
-            eq_points, freqs, min_db=-24.0, max_db=24.0
-        )
-
-        max_boost_db = float(np.max(gain_db))
-        low_band_mask = freqs <= 280.0
-        low_boost_db = float(np.max(gain_db[low_band_mask])) if np.any(low_band_mask) else 0.0
-        headroom_db = 0.0
-        if low_boost_db > 3.0:
-            headroom_db -= (low_boost_db - 3.0) * 0.55
-        elif max_boost_db > 4.0:
-            headroom_db -= (max_boost_db - 4.0) * 0.40
-
-        effective_db = gain_db + headroom_db
-        gain_linear = (10.0 ** (effective_db / 20.0)).astype(np.float32)[:, None]
-
-        idx = np.arange(n_frames, dtype=np.float32)
-        sine_win = np.sin(np.pi * idx / float(n_frames))[:, None]
-
-        frame1 = np.vstack([self._prev_in[half:], work[:half]]) * sine_win
-        frame2 = work * sine_win
-
-        y1 = (
-            np.fft.irfft(np.fft.rfft(frame1, n=n_frames, axis=0) * gain_linear, n=n_frames, axis=0).astype(
-                np.float32
-            )
-            * sine_win
-        )
-        y2 = (
-            np.fft.irfft(np.fft.rfft(frame2, n=n_frames, axis=0) * gain_linear, n=n_frames, axis=0).astype(
-                np.float32
-            )
-            * sine_win
-        )
-
-        out = np.zeros((n_frames, n_ch), dtype=np.float32)
-        out[:half] = self._ola_tail + y1[:half]
-        out[half:] = y1[half:] + y2[:half]
-
-        self._ola_tail = y2[half:].copy()
-        self._prev_in = work.copy()
-
-        return AudioDSPEngine.soft_knee_limiter(out)
+        sos, pre_gain = self.build_sos_matrix(sample_rate, eq_points)
+        out, self._zi = signal.sosfilt(sos, work * pre_gain, axis=0, zi=self._zi)
+        out_f32 = out.astype(np.float32)
+        if float(np.max(np.abs(out_f32))) > 0.985:
+            out_f32 = AudioDSPEngine.soft_knee_limiter(out_f32, threshold=0.88)
+        return out_f32[:, 0] if was_1d else out_f32
 
 
 class AudioDSPEngine:
@@ -1412,34 +1574,12 @@ class AudioDSPEngine:
     ) -> np.ndarray:
         if audio_block.size == 0 or not eq_points:
             return audio_block
+        if max((abs(float(p[1])) for p in eq_points), default=0.0) < 0.05:
+            return audio_block
 
-        n_samples = audio_block.shape[0]
-        freqs = np.fft.rfftfreq(n_samples, d=1.0 / float(sample_rate))
-        gain_db = AudioDSPEngine.evaluate_smooth_curve_db(
-            eq_points, freqs, min_db=-24.0, max_db=24.0
-        )
-
-        max_boost_db = float(np.max(gain_db))
-        low_mask = freqs <= 280.0
-        low_boost_db = float(np.max(gain_db[low_mask])) if np.any(low_mask) else 0.0
-        headroom_db = 0.0
-        if low_boost_db > 3.0:
-            headroom_db -= (low_boost_db - 3.0) * 0.55
-        elif max_boost_db > 4.0:
-            headroom_db -= (max_boost_db - 4.0) * 0.40
-
-        gain_linear = (10.0 ** ((gain_db + headroom_db) / 20.0)).astype(np.float32)
-
-        if audio_block.ndim == 1:
-            spec = np.fft.rfft(audio_block)
-            filtered = np.fft.irfft(spec * gain_linear, n=n_samples).astype(np.float32)
-            return AudioDSPEngine.soft_knee_limiter(filtered)
-
-        out = np.empty_like(audio_block, dtype=np.float32)
-        for ch in range(audio_block.shape[1]):
-            spec = np.fft.rfft(audio_block[:, ch])
-            out[:, ch] = np.fft.irfft(spec * gain_linear, n=n_samples)
-        return AudioDSPEngine.soft_knee_limiter(out)
+        sos, pre_gain = StatefulOverlapAddEQ.build_sos_matrix(sample_rate, eq_points)
+        filtered = signal.sosfilt(sos, audio_block.astype(np.float64) * pre_gain, axis=0)
+        return AudioDSPEngine.soft_knee_limiter(filtered.astype(np.float32), threshold=0.95)
 
     @staticmethod
     def live_resample_effect_block(
@@ -1478,12 +1618,12 @@ class AudioDSPEngine:
                 work = np.vstack([work, pad])
 
         work = np.clip(work, -1.0, 1.0)
-        if target_bit_depth == 8:
-            work = np.round(work * 127.0) / 127.0
-        elif target_bit_depth == 16:
-            work = np.round(work * 32767.0) / 32767.0
-        elif target_bit_depth == 24:
-            work = np.round(work * 8388607.0) / 8388607.0
+        if target_bit_depth in (8, 16, 24) and work.size > 0:
+            scale = 127.0 if target_bit_depth == 8 else (32767.0 if target_bit_depth == 16 else 8388607.0)
+            # 带静音门限的 TPDF 三角概率密度抖动（仅对非纯静音样本施加 ±1 LSB 抖动，纯静音保持绝对 0.0）
+            active_mask = np.abs(work) >= 1e-8
+            tpdf = (np.random.random(work.shape).astype(np.float32) - np.random.random(work.shape).astype(np.float32)) * active_mask
+            work = np.clip(np.round(work * scale + tpdf), -scale, scale) / scale
 
         return work.astype(np.float32)
 
@@ -1499,16 +1639,60 @@ class AudioDSPEngine:
         if work.ndim == 1:
             work = np.column_stack([work, work])
 
-        if target_channels == 1:
-            work = np.mean(work, axis=1)
-        elif work.shape[1] == 1 and target_channels == 2:
+        orig_ch = work.shape[1]
+        eff_ch = orig_ch if target_channels <= 0 else int(np.clip(target_channels, 1, 8))
+        if eff_ch == 1:
+            work = np.mean(work[:, :min(2, orig_ch)], axis=1)
+        elif eff_ch == 2 and orig_ch > 2:
+            work = SystemLoopbackCapture._downmix_multichannel_to_stereo(work.reshape(-1), orig_ch)
+        elif eff_ch == 2 and orig_ch == 1:
             work = np.column_stack([work[:, 0], work[:, 0]])
+        elif eff_ch > orig_ch:
+            # 专业 5.1 (6ch) / 7.1 (8ch) 声学矩阵上混拆分 (Python 与 C++ 双端统一算法)：
+            # 基于 M/S 声场分解 + 120 Hz 二阶巴特沃斯低通滤波器提取 LFE 重低音 + 环绕声反相差信号矩阵
+            n_f = work.shape[0]
+            upmixed = np.zeros((n_f, eff_ch), dtype=np.float32)
+            upmixed[:, :orig_ch] = work
+            l_ch = work[:, 0].astype(np.float64)
+            r_ch = work[:, 1].astype(np.float64) if orig_ch >= 2 else l_ch
+            mid = 0.5 * (l_ch + r_ch)
 
-        if target_sr != orig_sr:
+            sr_d = float(max(8000, int(orig_sr)))
+            fc_lfe = min(120.0, sr_d * 0.20)
+            if n_f >= 8:
+                sos_lfe = signal.butter(2, fc_lfe / (0.5 * sr_d), btype="low", output="sos")
+                lfe_sig = signal.sosfilt(sos_lfe, mid) * 0.85
+            else:
+                lfe_sig = mid * 0.85
+
+            upmixed[:, 0] = l_ch.astype(np.float32)                            # FL: 前置左声道
+            if eff_ch >= 2:
+                upmixed[:, 1] = r_ch.astype(np.float32)                        # FR: 前置右声道
+            if eff_ch >= 3 and orig_ch < 3:
+                upmixed[:, 2] = (0.70710678 * mid).astype(np.float32)          # FC: 中置人声通道 (-3dB 同相中置)
+            if eff_ch >= 4 and orig_ch < 4:
+                upmixed[:, 3] = lfe_sig.astype(np.float32)                     # LFE: 120Hz 巴特沃斯低通重低音通道
+            if eff_ch >= 6 and orig_ch < 6:
+                upmixed[:, 4] = (0.55 * (l_ch - 0.65 * r_ch)).astype(np.float32)  # BL: 后左环绕 (左声场环境差信号)
+                upmixed[:, 5] = (0.55 * (r_ch - 0.65 * l_ch)).astype(np.float32)  # BR: 后右环绕 (右声场环境差信号)
+            if eff_ch >= 8 and orig_ch < 8:
+                upmixed[:, 6] = (0.60 * l_ch - 0.25 * r_ch).astype(np.float32)    # SL: 侧左环绕 (宽声场侧向包围)
+                upmixed[:, 7] = (0.60 * r_ch - 0.25 * l_ch).astype(np.float32)    # SR: 侧右环绕 (宽声场侧向包围)
+            work = upmixed
+
+        if target_sr > 0 and target_sr != orig_sr:
             gcd = math.gcd(int(orig_sr), int(target_sr))
             up = int(target_sr) // gcd
             down = int(orig_sr) // gcd
-            work = signal.resample_poly(work, up, down, axis=0)
+            work = signal.resample_poly(work.astype(np.float64), up, down, axis=0, window=("kaiser", 9.0)).astype(np.float32)
+
+        # 关键防破音步骤 (ITU-R BS.1770 True Peak 防护)：
+        # 在 Sinc 重采样滤波完成之后检测全局真实峰值 (post_peak)。
+        # 无论是多声道叠加还是重采样滤波器在鼓点瞬态产生的采样间过冲 (ISP > 1.0)，
+        # 均通过单一恒定系数 (0.98 / post_peak) 整体无损缩放，彻底杜绝 np.clip 硬截断破音！
+        post_peak = float(np.max(np.abs(work))) if work.size > 0 else 0.0
+        if post_peak > 0.985:
+            work = work * np.float32(0.98 / post_peak)
 
         work = np.clip(work, -1.0, 1.0)
         if target_bit_depth == 8:
@@ -1707,15 +1891,28 @@ class SystemLoopbackCapture:
         self.thread: Optional[threading.Thread] = None
         self.sample_rate: int = 48000
         self.channels: int = 2
+        self.requested_channels: int = 0
         self.device_name: str = "未启动"
         self._latest_chunk: np.ndarray = np.zeros((2048, 2), dtype=np.float32)
         self._lock = threading.Lock()
         self.on_audio_chunk_callback = None
+        self._expected_callback_time: Optional[float] = None
 
-    def start(self, callback=None) -> Tuple[bool, str]:
+    def reset_timeline(self) -> None:
+        self._expected_callback_time = None
+
+    def start(self, callback=None, preferred_channels: int = 0) -> Tuple[bool, str]:
+        norm_pref = 0 if int(preferred_channels) <= 0 else int(np.clip(preferred_channels, 1, 8))
         if self.running:
-            return True, f"正在监听: {self.device_name}"
-        self.on_audio_chunk_callback = callback
+            if self.requested_channels == norm_pref:
+                if callback is not None:
+                    self.on_audio_chunk_callback = callback
+                return True, f"正在监听: {self.device_name} ({self.channels}声道)"
+            # 若用户切换了目标采集声道（如请求 6 声道 0x3F 或 8 声道 0x63F），自动重启回环会话以重新协商格式
+            self.stop()
+        self.requested_channels = norm_pref
+        if callback is not None:
+            self.on_audio_chunk_callback = callback
         self.running = True
 
         if HAS_PYAUDIOWPATCH:
@@ -1739,39 +1936,135 @@ class SystemLoopbackCapture:
             self.thread.join(timeout=0.8)
         self.thread = None
 
+    @staticmethod
+    def _downmix_multichannel_to_stereo(flat_arr: np.ndarray, channels: int) -> np.ndarray:
+        if channels <= 1:
+            return np.column_stack([flat_arr, flat_arr]).astype(np.float32)
+        n_frames = len(flat_arr) // channels
+        if n_frames <= 0:
+            return np.zeros((0, 2), dtype=np.float32)
+        frames = flat_arr[: n_frames * channels].reshape(n_frames, channels).astype(np.float32)
+        if channels == 2:
+            return frames
+        c_mix = np.float32(0.70710678)
+        lfe_mix = np.float32(0.70710678)
+        l = frames[:, 0].copy()
+        r = frames[:, 1].copy()
+        if channels == 3:
+            l += c_mix * frames[:, 2]
+            r += c_mix * frames[:, 2]
+        elif channels == 4:
+            l += c_mix * frames[:, 2]
+            r += c_mix * frames[:, 3]
+        elif channels == 5:
+            l += c_mix * (frames[:, 2] + frames[:, 3] + frames[:, 4])
+            r += c_mix * (frames[:, 2] + frames[:, 3] + frames[:, 4])
+        elif channels == 6:
+            # ITU-R BS.775 5.1 (SPEAKERS_5POINT1) 标准恒定系数下混矩阵 (FL, FR, FC, LFE, BL, BR)
+            l += c_mix * (frames[:, 2] + frames[:, 3] + frames[:, 4])
+            r += c_mix * (frames[:, 2] + frames[:, 3] + frames[:, 5])
+        elif channels == 7:
+            # 6.1: FL, FR, FC, LFE, BL, BR, BC
+            l += c_mix * (frames[:, 2] + frames[:, 3] + frames[:, 4] + c_mix * frames[:, 6])
+            r += c_mix * (frames[:, 2] + frames[:, 3] + frames[:, 5] + c_mix * frames[:, 6])
+        elif channels >= 8:
+            # ITU-R BS.775 7.1 (SPEAKERS_7POINT1) 标准恒定系数下混矩阵 (FL, FR, FC, LFE, BL, BR, SL, SR)
+            l += c_mix * (frames[:, 2] + frames[:, 3] + frames[:, 4] + frames[:, 6])
+            r += c_mix * (frames[:, 2] + frames[:, 3] + frames[:, 5] + frames[:, 7])
+        # 严格保持 100% 恒定线性系数直通，绝不按 10ms 小包动态缩放增益（彻底消除鼓点触发增益抽吸导致中高频丢失）
+        return np.column_stack([l, r]).astype(np.float32)
+
     def get_latest_chunk(self) -> Tuple[np.ndarray, int, int]:
         with self._lock:
             return self._latest_chunk.copy(), self.sample_rate, self.channels
 
     def _run_pyaudiowpatch(self) -> None:
+        """
+        采用开源项目 s0d3s/PyAudioWPatch 官方推荐的异步 stream_callback 架构 (examples/pawp_record_wasapi_loopback.py)：
+        直接由底层 PortAudio WASAPI 实时线程按声卡原生包大小零阻塞回调推送，彻底消除 while 循环阻塞式 stream.read(1024)
+        切割 480 帧 WASAPI 音频包所引发的周期性断帧毛刺与金属感失真。
+        """
         p = pyaudio.PyAudio()
         stream = None
         try:
-            loopback_dev = p.get_default_wasapi_loopback()
-            self.sample_rate = int(loopback_dev["defaultSampleRate"])
-            self.channels = max(1, min(2, int(loopback_dev["maxInputChannels"])))
-            self.device_name = str(loopback_dev.get("name", "WASAPI Loopback"))
-            chunk_frames = 2048
-
-            stream = p.open(
-                format=pyaudio.paFloat32,
-                channels=self.channels,
-                rate=self.sample_rate,
-                frames_per_buffer=chunk_frames,
-                input=True,
-                input_device_index=loopback_dev["index"],
-            )
-            while self.running:
-                raw = stream.read(chunk_frames, exception_on_overflow=False)
-                arr = np.frombuffer(raw, dtype=np.float32)
-                if self.channels > 1:
-                    arr = arr.reshape(-1, self.channels)
+            loopback_dev = None
+            try:
+                wasapi_info = p.get_host_api_info_by_type(pyaudio.paWASAPI)
+                default_speakers = p.get_device_info_by_index(wasapi_info["defaultOutputDevice"])
+                if not default_speakers.get("isLoopbackDevice", False):
+                    for candidate in p.get_loopback_device_info_generator():
+                        if default_speakers["name"] in candidate["name"]:
+                            loopback_dev = candidate
+                            break
                 else:
-                    arr = np.column_stack([arr, arr])
-                with self._lock:
-                    self._latest_chunk = arr
-                if self.on_audio_chunk_callback:
-                    self.on_audio_chunk_callback(arr, self.sample_rate)
+                    loopback_dev = default_speakers
+            except Exception:
+                loopback_dev = None
+
+            if loopback_dev is None:
+                loopback_dev = p.get_default_wasapi_loopback()
+
+            self.sample_rate = int(loopback_dev["defaultSampleRate"])
+            dev_ch = max(1, min(8, int(loopback_dev.get("maxInputChannels", 2))))
+            self.device_name = str(loopback_dev.get("name", "WASAPI Loopback"))
+            req_ch = self.requested_channels if self.requested_channels > 0 else dev_ch
+            open_ch = req_ch
+
+            def _pa_callback(in_data, frame_count, time_info, status):
+                if not self.running:
+                    return (None, pyaudio.paComplete)
+                if in_data:
+                    now_t = time.perf_counter()
+                    if self._expected_callback_time is not None and self.on_audio_chunk_callback:
+                        gap_s = now_t - self._expected_callback_time
+                        if gap_s > 0.030:
+                            fill_s = min(gap_s, 10.0)
+                            n_zeros = int(round(fill_s * self.sample_rate))
+                            if n_zeros > 0:
+                                self.on_audio_chunk_callback(np.zeros((n_zeros, open_ch), dtype=np.float32), self.sample_rate)
+                    self._expected_callback_time = now_t + (frame_count / float(max(1, self.sample_rate)))
+
+                    arr = np.frombuffer(in_data, dtype=np.float32)
+                    n_f = len(arr) // max(1, open_ch)
+                    raw_multi = arr[: n_f * open_ch].reshape(n_f, open_ch).astype(np.float32) if n_f > 0 else np.zeros((0, open_ch), dtype=np.float32)
+                    stereo = self._downmix_multichannel_to_stereo(arr, open_ch)
+                    if stereo.size > 0:
+                        with self._lock:
+                            self._latest_chunk = stereo
+                        if self.on_audio_chunk_callback:
+                            self.on_audio_chunk_callback(raw_multi, self.sample_rate)
+                return (in_data, pyaudio.paContinue)
+
+            # 依次尝试：用户请求声道数 (如 6ch/8ch) -> 声卡原生最大声道数 dev_ch -> 标准 2 声道立体声
+            # 实际开启成功几声道，就如实将 self.channels 设为几声道（绝不虚标）
+            candidate_chs = []
+            for c_val in (req_ch, dev_ch, 2, 1):
+                if 1 <= c_val <= 8 and c_val not in candidate_chs:
+                    candidate_chs.append(c_val)
+
+            last_err = None
+            for cand_ch in candidate_chs:
+                try:
+                    open_ch = cand_ch
+                    stream = p.open(
+                        format=pyaudio.paFloat32,
+                        channels=open_ch,
+                        rate=self.sample_rate,
+                        frames_per_buffer=0,
+                        input=True,
+                        input_device_index=loopback_dev["index"],
+                        stream_callback=_pa_callback,
+                    )
+                    self.channels = open_ch
+                    break
+                except Exception as err:
+                    last_err = err
+                    stream = None
+            if stream is None and last_err is not None:
+                raise last_err
+            stream.start_stream()
+            while self.running and stream.is_active():
+                time.sleep(0.03)
         except Exception as exc:
             self.device_name = f"WASAPI 异常: {exc}"
         finally:
@@ -1802,10 +2095,10 @@ class SystemLoopbackCapture:
                     break
 
             if target_idx is None:
-                default_in = sd.query_devices(kind="input")
-                self.device_name = str(default_in.get("name", "默认音频输入"))
-                self.sample_rate = int(default_in.get("default_samplerate", 44100))
-                self.channels = min(2, max(1, int(default_in.get("max_input_channels", 1))))
+                # 严禁回退打开笔记本外置麦克风（麦克风外录及系统降噪会导致音乐严重发闷与人声丢失）
+                self.device_name = "内部数字直通回环"
+                self.running = False
+                return
 
             def _cb(indata, frames, time_info, status):
                 arr = indata.copy().astype(np.float32)
@@ -1846,6 +2139,10 @@ def build_standalone_exe_package() -> Tuple[bool, str]:
     root_dir = script_path.parent
     icon_file = root_dir / "app_icon.ico"
     icon_args = ["--icon", str(icon_file), "--add-data", f"{icon_file}{os.pathsep}."] if icon_file.exists() else []
+    for doc_name in ("DISCLAIMER.md", "../DISCLAIMER.md", "../LICENSE"):
+        doc_cand = (root_dir / doc_name).resolve()
+        if doc_cand.exists():
+            icon_args.extend(["--add-data", f"{doc_cand}{os.pathsep}."])
     cmd = [
         sys.executable,
         "-m",
@@ -1908,7 +2205,7 @@ if HAS_QT:
 
         def __init__(self, parent=None, require_checkbox: bool = True) -> None:
             super().__init__(parent=parent)
-            self.setWindowTitle("📜 软件使用免责协议与风险告知书 (DISCLAIMER.md)")
+            self.setWindowTitle("📜 免责/开源协议与第三方致谢声明 (DISCLAIMER.md)")
             self.resize(720, 540)
             self.setModal(True)
             self.setStyleSheet(
@@ -1946,7 +2243,7 @@ if HAS_QT:
             vbox.setContentsMargins(16, 14, 16, 14)
             vbox.setSpacing(10)
 
-            lbl_title = QLabel("⚠️ 欢迎使用 Audio Studio Pro — 请在开始使用前仔细阅读并同意以下免责协议：")
+            lbl_title = QLabel("⚠️ 欢迎使用 Audio Studio Pro — 请在开始使用前仔细阅读并同意以下免责/开源协议：")
             lbl_title.setStyleSheet("color: #38BDF8; font-size: 14px; font-weight: bold;")
             vbox.addWidget(lbl_title)
 
@@ -1956,7 +2253,7 @@ if HAS_QT:
             vbox.addWidget(self.text_box, stretch=1)
 
             self.chk_agree = QCheckBox(
-                "我已仔细阅读《DISCLAIMER.md 免责协议》，完全理解并同意遵守上述全部协议条款，自愿承担使用本软件的一切风险（使用本软件发生任何事情均与作者无关）"
+                "我已仔细阅读《DISCLAIMER.md 免责/开源协议》，完全理解并同意遵守上述全部免责条款与开源协议，自愿承担一切使用风险（发生任何事与作者无关）"
             )
             self.chk_agree.setChecked(not require_checkbox)
             vbox.addWidget(self.chk_agree)
@@ -2642,6 +2939,7 @@ if HAS_QT:
 
             self.current_file_path: Optional[str] = None
             self.audio_buffer: Optional[np.ndarray] = None
+            self.raw_audio_buffer: Optional[np.ndarray] = None
             self.orig_sample_rate: int = 44100
             self.play_cursor: int = 0
             self.is_playing_file: bool = False
@@ -2688,8 +2986,14 @@ if HAS_QT:
             self.record_source_mode: str = "internal"
             self.recorded_chunks: List[np.ndarray] = []
             self.recorded_source_sr: int = 44100
+            self.recorded_source_ch: int = 2
             self.record_start_time: float = 0.0
             self._record_lock = threading.Lock()
+            self._is_window_resizing: bool = False
+            self._resize_debounce_timer = QTimer(self)
+            self._resize_debounce_timer.setSingleShot(True)
+            self._resize_debounce_timer.setInterval(120)
+            self._resize_debounce_timer.timeout.connect(self._on_resize_settled)
 
             self.output_stream = None
             self.stream_sample_rate: int = 44100
@@ -2833,6 +3137,15 @@ if HAS_QT:
             self.status_bar.showMessage(
                 "就绪"
             )
+            self.lbl_github_repo = QLabel(
+                '<a href="https://github.com/KhaTianyuz/Audio_Studio_Pro" '
+                'style="color: #38BDF8; text-decoration: none; font-weight: bold;">'
+                'GitHub 开源仓库: https://github.com/KhaTianyuz/Audio_Studio_Pro</a>'
+            )
+            self.lbl_github_repo.setOpenExternalLinks(True)
+            self.lbl_github_repo.setToolTip("点击在默认浏览器中打开 GitHub 开源仓库")
+            self.lbl_github_repo.setContentsMargins(10, 0, 8, 0)
+            self.status_bar.addPermanentWidget(self.lbl_github_repo)
 
         def _build_top_toolbar(self) -> QGroupBox:
             box = QGroupBox("播放与控制")
@@ -2938,8 +3251,8 @@ if HAS_QT:
             btn_build_exe.clicked.connect(self.on_build_standalone_exe)
             row2.addWidget(btn_build_exe)
 
-            btn_show_disclaimer = QPushButton("📜 免责协议")
-            btn_show_disclaimer.setToolTip("查看《DISCLAIMER.md 软件使用免责协议与风险告知书》")
+            btn_show_disclaimer = QPushButton("📜 免责/开源协议")
+            btn_show_disclaimer.setToolTip("查看《DISCLAIMER.md 软件使用免责协议、开源许可证与第三方开源组件致谢》")
             btn_show_disclaimer.clicked.connect(self.on_show_disclaimer_dialog)
             row2.addWidget(btn_show_disclaimer)
 
@@ -3345,8 +3658,10 @@ if HAS_QT:
             res_layout.addRow("目标采样位深:", self.combo_target_bits)
 
             self.combo_target_ch = QComboBox()
-            self.combo_target_ch.addItem("立体声", 2)
-            self.combo_target_ch.addItem("单声道", 1)
+            self.combo_target_ch.addItem("立体声 (2声道 Stereo)", 2)
+            self.combo_target_ch.addItem("单声道 (1声道 Mono)", 1)
+            self.combo_target_ch.addItem("5.1 环绕声 (6声道)", 6)
+            self.combo_target_ch.addItem("7.1 环绕声 (8声道)", 8)
             self.combo_target_ch.currentIndexChanged.connect(
                 lambda: setattr(self.preset, "target_channels", int(self.combo_target_ch.currentData()))
             )
@@ -3378,9 +3693,10 @@ if HAS_QT:
             rec_layout.addRow("选择录制源:", self.combo_rec_source)
 
             self.combo_rec_sr = QComboBox()
+            self.combo_rec_sr.addItem("保持原采样率 (无损直通)", 0)
             for sr_val in [16000, 22050, 44100, 48000, 96000]:
                 self.combo_rec_sr.addItem(f"{sr_val} Hz", sr_val)
-            self.combo_rec_sr.setCurrentText("44100 Hz")
+            self.combo_rec_sr.setCurrentIndex(0)
             rec_layout.addRow("录制导出采样率:", self.combo_rec_sr)
 
             self.combo_rec_bits = QComboBox()
@@ -3389,15 +3705,19 @@ if HAS_QT:
             rec_layout.addRow("录制导出位深:", self.combo_rec_bits)
 
             self.combo_rec_ch = QComboBox()
-            self.combo_rec_ch.addItem("立体声 (Stereo)", 2)
-            self.combo_rec_ch.addItem("单声道 (Mono)", 1)
+            self.combo_rec_ch.addItem("保持原声道 (多声道/立体声无损直通)", 0)
+            self.combo_rec_ch.addItem("立体声 (2声道 Stereo)", 2)
+            self.combo_rec_ch.addItem("单声道 (1声道 Mono)", 1)
+            self.combo_rec_ch.addItem("5.1 环绕声 (6声道)", 6)
+            self.combo_rec_ch.addItem("7.1 环绕声 (8声道)", 8)
+            self.combo_rec_ch.currentIndexChanged.connect(self._on_rec_channel_selection_changed)
             rec_layout.addRow("录制导出声道:", self.combo_rec_ch)
 
             self.combo_rec_format = QComboBox()
             self.combo_rec_format.addItems(["wav", "mp3", "flac", "ogg"])
             rec_layout.addRow("录制保存格式:", self.combo_rec_format)
 
-            self.lbl_rec_status = QLabel("状态：待机中 (已录制 0.0 秒)")
+            self.lbl_rec_status = QLabel("状态：待机中 (已录制 0.0 秒 | 实际采集 44100 Hz / 2 声道)")
             self.lbl_rec_status.setStyleSheet("color: #FBBF24; font-weight: bold;")
             rec_layout.addRow("当前录音状态:", self.lbl_rec_status)
 
@@ -3862,6 +4182,14 @@ if HAS_QT:
                     self.output_stream.close()
                     self.output_stream = None
 
+                try:
+                    out_dev = sd.query_devices(kind="output")
+                    native_sr = int(out_dev.get("default_samplerate", 48000))
+                    if native_sr >= 8000:
+                        self.stream_sample_rate = native_sr
+                except Exception:
+                    pass
+
                 self.output_stream = sd.OutputStream(
                     samplerate=self.stream_sample_rate,
                     channels=2,
@@ -3932,15 +4260,6 @@ if HAS_QT:
                 block += synth_block
                 has_active_internal_sound = True
 
-            if self.preset.resample_live_enabled and has_active_internal_sound:
-                block = AudioDSPEngine.live_resample_effect_block(
-                    block,
-                    orig_sr=self.stream_sample_rate,
-                    target_sr=self.preset.target_sample_rate,
-                    target_bit_depth=self.preset.target_bit_depth,
-                    target_channels=self.preset.target_channels,
-                )
-
             if self.preset.eq_enabled and has_active_internal_sound:
                 block = self._realtime_eq_processor.process_block(
                     block, self.stream_sample_rate, self.preset.eq_points
@@ -3960,31 +4279,83 @@ if HAS_QT:
                         self.snapshot_play_buffer = None
                         self.snapshot_play_cursor = 0
 
-            block = AudioDSPEngine.soft_knee_limiter(block * self.master_volume, threshold=0.85)
-            outdata[:] = block
+            # 在实时重采样预览前捕获 100% 满带宽内部录制信号，确保录音不会因左侧重采样预览而丢失高频
+            clean_rec_block = block.astype(np.float32).copy()
+
+            if self.preset.resample_live_enabled and has_active_internal_sound:
+                block = AudioDSPEngine.live_resample_effect_block(
+                    block,
+                    orig_sr=self.stream_sample_rate,
+                    target_sr=self.preset.target_sample_rate,
+                    target_bit_depth=self.preset.target_bit_depth,
+                    target_channels=self.preset.target_channels,
+                )
+            scaled_block = block * self.master_volume
+            out_block = (
+                AudioDSPEngine.soft_knee_limiter(scaled_block, threshold=0.88)
+                if float(np.max(np.abs(scaled_block))) > 0.985
+                else scaled_block
+            )
+            outdata[:] = out_block
 
             if has_active_internal_sound or not self.chk_freeze_on_pause.isChecked():
-                self._latest_output_chunk = block.copy()
+                self._latest_output_chunk = clean_rec_block.copy()
             if has_active_internal_sound and self.analysis_source_mode != "system_loopback":
-                self._append_to_rolling_history(block)
+                self._append_to_rolling_history(clean_rec_block)
 
             if self.is_recording and self.record_source_mode == "internal":
                 with self._record_lock:
-                    self.recorded_chunks.append(block.copy())
+                    self.recorded_chunks.append(clean_rec_block.copy())
                     self.recorded_source_sr = self.stream_sample_rate
+                    self.recorded_source_ch = 2
 
         def _on_loopback_chunk_received(self, chunk: np.ndarray, sr: int) -> None:
+            actual_ch = chunk.shape[1] if (chunk.ndim == 2 and chunk.shape[1] >= 1) else 2
             if self.analysis_source_mode == "system_loopback":
-                self._append_to_rolling_history(chunk)
+                stereo_view = (
+                    SystemLoopbackCapture._downmix_multichannel_to_stereo(chunk.reshape(-1), actual_ch)
+                    if (chunk.ndim == 2 and actual_ch > 2)
+                    else chunk
+                )
+                self._append_to_rolling_history(stereo_view)
             if self.is_recording and self.record_source_mode == "loopback":
                 with self._record_lock:
                     self.recorded_chunks.append(chunk.copy())
                     self.recorded_source_sr = sr
+                    self.recorded_source_ch = actual_ch
+
+        def resizeEvent(self, event) -> None:
+            # 窗口缩放防抖优化：拖拽改变窗口大小时暂停高频 FFT 重绘与坐标轴重排，松手 120ms 后立即恢复，彻底消除拖拽卡顿
+            self._is_window_resizing = True
+            self._resize_debounce_timer.start()
+            super().resizeEvent(event)
+
+        def _on_resize_settled(self) -> None:
+            self._is_window_resizing = False
+
+        def _on_rec_channel_selection_changed(self) -> None:
+            if not self.is_recording and self.loopback_capture.running:
+                req_ch = int(self.combo_rec_ch.currentData())
+                self.loopback_capture.start(callback=self._on_loopback_chunk_received, preferred_channels=req_ch)
+            self._update_idle_rec_status_label()
+
+        def _update_idle_rec_status_label(self) -> None:
+            if self.is_recording:
+                return
+            if self.combo_rec_source.currentData() == "loopback" and self.loopback_capture.running:
+                sr = self.loopback_capture.sample_rate
+                ch = self.loopback_capture.channels
+            else:
+                sr = self.recorded_source_sr if self.recorded_chunks else self.stream_sample_rate
+                ch = self.recorded_source_ch if self.recorded_chunks else 2
+            self.lbl_rec_status.setText(f"状态：待机中 (实际采集 {sr} Hz / {ch} 声道)")
 
         def _on_ui_refresh_tick(self) -> None:
-            if self.audio_buffer is not None and self.orig_sample_rate > 0:
-                total_sec = self.audio_buffer.shape[0] / float(self.orig_sample_rate)
-                cur_sec = self.play_cursor / float(self.orig_sample_rate)
+            if self._is_window_resizing:
+                return
+            if self.audio_buffer is not None and self.stream_sample_rate > 0:
+                total_sec = self.audio_buffer.shape[0] / float(self.stream_sample_rate)
+                cur_sec = self.play_cursor / float(self.stream_sample_rate)
                 if not self.slider_seek.isSliderDown() and self.audio_buffer.shape[0] > 0:
                     ratio = int((self.play_cursor / float(self.audio_buffer.shape[0])) * 1000)
                     self.slider_seek.setValue(ratio)
@@ -3996,7 +4367,9 @@ if HAS_QT:
 
             if self.is_recording:
                 elapsed = time.time() - self.record_start_time
-                self.lbl_rec_status.setText(f"🔴 正在录制 ({self.record_source_mode})... 已录制 {elapsed:.1f} 秒")
+                self.lbl_rec_status.setText(
+                    f"🔴 正在录制... (已录制 {elapsed:.1f} 秒 | 实际采集 {self.recorded_source_sr} Hz / {self.recorded_source_ch} 声道)"
+                )
 
             use_log = self.chk_log_freq.isChecked()
             peak_cnt = self.preset.peak_annotation_count
@@ -4308,8 +4681,16 @@ if HAS_QT:
                     file_path
                 )
                 self.current_file_path = resolved_wav_path
-                self.audio_buffer = audio
+                self.raw_audio_buffer = audio.copy()
                 self.orig_sample_rate = sr
+                if self.output_stream is None:
+                    self._init_audio_output_stream()
+                if sr != self.stream_sample_rate and self.stream_sample_rate > 0:
+                    self.audio_buffer = AudioDSPEngine.offline_resample(
+                        audio, sr, self.stream_sample_rate, 32, 2
+                    )
+                else:
+                    self.audio_buffer = audio
                 self.play_cursor = 0
                 self._peak_hold_db = None
                 self._has_rendered_live_frame = False
@@ -4319,10 +4700,6 @@ if HAS_QT:
                 # 加载新歌曲时自动重置节拍起点
                 self._bpm_anchor_time = time.perf_counter()
                 self._bpm_last_beat_index = -1
-
-                if sr != self.stream_sample_rate:
-                    self.stream_sample_rate = sr
-                    self._init_audio_output_stream()
 
                 duration = audio.shape[0] / float(sr)
                 if orig_ext != ".wav":
@@ -4372,7 +4749,8 @@ if HAS_QT:
 
         def on_toggle_analysis_source(self, checked: bool) -> None:
             if checked:
-                ok, msg = self.loopback_capture.start(callback=self._on_loopback_chunk_received)
+                req_ch = int(self.combo_rec_ch.currentData()) if hasattr(self, "combo_rec_ch") else 0
+                ok, msg = self.loopback_capture.start(callback=self._on_loopback_chunk_received, preferred_channels=req_ch)
                 if not ok:
                     self.btn_switch_source.setChecked(False)
                     QMessageBox.warning(self, "系统媒体捕获启动失败", msg)
@@ -4546,9 +4924,15 @@ if HAS_QT:
             )
             if not out_path:
                 return
+            if not out_path.lower().endswith(f".{ext.lower()}"):
+                out_path = str(Path(out_path).with_suffix(f".{ext.lower()}"))
 
             try:
-                audio_to_save = self.audio_buffer.copy()
+                audio_to_save = (
+                    self.raw_audio_buffer.copy()
+                    if self.raw_audio_buffer is not None
+                    else self.audio_buffer.copy()
+                )
                 if self.preset.eq_enabled:
                     audio_to_save = AudioDSPEngine.apply_eq_curve_block(
                         audio_to_save, self.orig_sample_rate, self.preset.eq_points
@@ -4574,27 +4958,48 @@ if HAS_QT:
         def on_toggle_recording(self, checked: bool) -> None:
             if checked:
                 self.record_source_mode = self.combo_rec_source.currentData()
-                if self.record_source_mode == "loopback" and not self.loopback_capture.running:
-                    ok, msg = self.loopback_capture.start(callback=self._on_loopback_chunk_received)
+                req_ch = int(self.combo_rec_ch.currentData())
+                if self.record_source_mode == "loopback":
+                    ok, msg = self.loopback_capture.start(
+                        callback=self._on_loopback_chunk_received,
+                        preferred_channels=req_ch,
+                    )
                     if not ok:
                         self.btn_start_rec.setChecked(False)
                         QMessageBox.warning(self, "内录启动失败", msg)
                         return
+                    self.recorded_source_sr = self.loopback_capture.sample_rate
+                    self.recorded_source_ch = self.loopback_capture.channels
+                else:
+                    self.recorded_source_sr = self.stream_sample_rate
+                    self.recorded_source_ch = 2
 
+                self.loopback_capture.reset_timeline()
                 with self._record_lock:
                     self.recorded_chunks.clear()
+                self.combo_rec_source.setEnabled(False)
                 self.record_start_time = time.time()
                 self.is_recording = True
                 self.btn_start_rec.setText("⏹ 停止录制")
-                self.status_bar.showMessage("已开始录制音频...")
+                self.status_bar.showMessage(
+                    f"已开始录制音频 (实际采集 {self.recorded_source_sr} Hz / {self.recorded_source_ch} 声道)..."
+                )
             else:
                 self.is_recording = False
+                self.combo_rec_source.setEnabled(True)
+                if self.analysis_source_mode != "system_loopback":
+                    self.loopback_capture.stop()
                 self.btn_start_rec.setText("⏺ 开始录制声音")
                 elapsed = time.time() - self.record_start_time
-                self.lbl_rec_status.setText(f"状态：录制完成 (共 {elapsed:.1f} 秒，可点击右侧按钮导出)")
+                self.lbl_rec_status.setText(
+                    f"状态：录制完成 (共 {elapsed:.1f} 秒 | 实际采集 {self.recorded_source_sr} Hz / {self.recorded_source_ch} 声道)"
+                )
                 self.status_bar.showMessage("录制已停止，请点击“导出保存录音文件”进行保存。")
 
         def on_export_recorded_audio(self) -> None:
+            if self.is_recording:
+                QMessageBox.information(self, "提示", "请先点击“停止录制”，然后再导出录音文件。")
+                return
             with self._record_lock:
                 if not self.recorded_chunks:
                     QMessageBox.information(self, "提示", "当前没有已录制的音频数据，请先点击“开始录制声音”。")
@@ -4608,6 +5013,8 @@ if HAS_QT:
             )
             if not out_path:
                 return
+            if not out_path.lower().endswith(f".{ext.lower()}"):
+                out_path = str(Path(out_path).with_suffix(f".{ext.lower()}"))
 
             try:
                 saved_path = UniversalAudioFormatConverter.export_and_convert_audio(

@@ -195,10 +195,11 @@ set(MINIAUDIO_LOCAL_DIR "${CMAKE_CURRENT_SOURCE_DIR}/third_party/miniaudio")
 download_file_with_mirrors(
     "miniaudio/miniaudio.h"
     "${MINIAUDIO_LOCAL_DIR}/miniaudio.h"
+    "https://gitee.com/yizhigai/miniaudio/raw/master/miniaudio.h"
+    "https://gitee.com/kyozy/miniaudio/raw/master/miniaudio.h"
     "${CDN_JSDELIVR}/mackron/miniaudio@0.11.21/miniaudio.h"
     "${CDN_FASTLY}/mackron/miniaudio@0.11.21/miniaudio.h"
     "${CDN_GCORE}/mackron/miniaudio@0.11.21/miniaudio.h"
-    "${PROXY_GHFAST}raw.githubusercontent.com/mackron/miniaudio/0.11.21/miniaudio.h"
     "${RAW_GITHUB}/mackron/miniaudio/0.11.21/miniaudio.h"
 )
 
@@ -267,12 +268,15 @@ target_link_libraries(AudioStudioPro PRIVATE
     winmm
 )
 
-# 自动将 DISCLAIMER.md 与 app_icon.ico 复制到编译输出目录（不使用尖括号表达式）
+# 自动将 DISCLAIMER.md（含免责与第三方开源协议致谢）、LICENSE 与 app_icon.ico 复制到编译输出目录
 foreach(OUT_SUBDIR "." "Release" "Debug" "RelWithDebInfo" "MinSizeRel")
     if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/DISCLAIMER.md")
         file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/DISCLAIMER.md" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/${OUT_SUBDIR}")
     elseif(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/../DISCLAIMER.md")
         file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/../DISCLAIMER.md" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/${OUT_SUBDIR}")
+    endif()
+    if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/../LICENSE")
+        file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/../LICENSE" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/${OUT_SUBDIR}")
     endif()
     if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/app_icon.ico")
         file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/app_icon.ico" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/${OUT_SUBDIR}")
