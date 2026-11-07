@@ -1,6 +1,4 @@
-&lt;p align=&quot;center&quot;&gt;
-  &lt;img src=&quot;assets/app_icon.png&quot; width=&quot;120&quot; alt=&quot;Audio Studio Pro 图标&quot;&gt;
-&lt;/p&gt;
+![Audio Studio Pro 图标](assets/app_icon_120.png)
 
 # 🎵 Audio Studio Pro — 零基础也能看懂的音乐看音、88键钢琴跟谱、调音与内录神器（Python & C++20 双版本）
 
@@ -43,13 +41,13 @@
 
 第一次双击打开软件时，屏幕中央会弹出 **《免责/开源协议与第三方致谢声明 (DISCLAIMER.md)》** 窗口：
 
-
+![首次打开软件时的免责与开源协议确认弹窗](assets/screenshots/02_first_launch_disclaimer.png)
 
 - **怎么操作**：
   1. 请先向下滚动阅读里面的 **免责条款**（尤其是戴耳机调试合成器或拉高均衡器增益时请注意把音量调小，保护听力和音响硬件；导入非 `.wav` 音乐时软件会自动在同文件夹生成同名 `.wav` 文件）以及 **开源协议与第三方开源组件致谢**。
   2. 勾选底部的黄色复选框 **“我已仔细阅读《DISCLAIMER.md 免责/开源协议》……”**。
   3. 点击右侧绿色的 **【我已阅读并同意，进入软件】** 按钮即可进入主界面。
-  4. **以后不用每次都点**：软件会在程序旁边自动生成一个小小的 `.disclaimer_accepted.json` 记忆文件，下次打开就会直接进入主界面。如果以后想再次查看，随时点击主界面右上角的 **【免责/开源】** 按钮即可。
+  4. **以后不用每次都点**：软件会在程序旁边自动生成一个小小的 `.disclaimer_accepted.json` 记忆文件，下次打开就会直接进入主界面。如果以后想再次查看，随时点击主界面右上角的 **【免责/开源协议】** 按钮即可。
 
 ---
 
@@ -59,7 +57,7 @@
 
 当你导入一首歌，或者点击切换到第 4 个标签页 **【声音截取与钢琴】** 时，你会看到如下画面：
 
-
+![主界面：实时看音名与88键钢琴节拍跟谱](assets/screenshots/01_main_spectrum_and_piano.png)
 
 #### 👇 零基础一步步教你用：
 
@@ -89,7 +87,7 @@
 
 点击中间第 1 个标签页 **【均衡器】**，即可进入可视化调音台：
 
-
+![可拖动线条的均衡器画面](assets/screenshots/03_draggable_eq_curve.png)
 
 #### 👇 零基础一步步教你用：
 
@@ -113,7 +111,7 @@
 
 点击中间第 2 个标签页 **【声音合成器】**，你就拥有了一台数字乐器实验室：
 
-
+![乐器音色模拟与多声音混音画面](assets/screenshots/04_synth_and_recording.png)
 
 #### 👇 零基础一步步教你用：
 
@@ -135,7 +133,7 @@
 
 点击中间第 3 个标签页 **【格式转换与录音】**，左边是全格式重采样转换器，右边是无损录音机：
 
-
+![格式转换与多声道环绕声录音画面](assets/screenshots/05_format_convert_and_recording.png)
 
 #### 👇 左半边：【重采样与格式转换】怎么用？
 
@@ -223,6 +221,7 @@ Audio_Studio_Pro/
 ├── .gitignore                 # 自动忽略 build/、dist/、.vs/ 等编译临时文件
 ├── assets/
 │   ├── app_icon.png           # 软件高清图标 (512x512 PNG)
+│   ├── app_icon_120.png       # 适配 README 顶部展示的 120x120 图标
 │   ├── app_icon.ico           # Windows 多尺寸原生图标 (.ico)
 │   └── screenshots/           # 软件五大界面高清实机截图 (01 ~ 05)
 ├── cpp_version/
@@ -246,7 +245,7 @@ Audio_Studio_Pro/
 ## 📜 七、开源协议与第三方开源组件致谢
 
 - **官方开源仓库**：[https://github.com/KhaTianyuz/Audio_Studio_Pro](https://github.com/KhaTianyuz/Audio_Studio_Pro)
-- **项目主开源协议**：本项目基于 **[GNU Affero General Public License v3.0 (AGPL-3.0)](https://www.google.com/search?q=LICENSE)** 协议开源发布。您可以自由使用、修改、分发本软件及自行构建的 `.exe` 程序；任何基于本项目的修改版、衍生作品或网络服务部署均须以相同的 **AGPL-3.0** 协议公开完整源代码，并保留原始免责与开源协议声明。
+- **项目主开源协议**：本项目基于 **[GNU Affero General Public License v3.0 (AGPL-3.0)](LICENSE)** 协议开源发布。您可以自由使用、修改、分发本软件及自行构建的 `.exe` 程序；任何基于本项目的修改版、衍生作品或网络服务部署均须以相同的 **AGPL-3.0** 协议公开完整源代码，并保留原始免责与开源协议声明。
 - **第三方开源组件致谢**：
   - **C++20 原生版**致谢：**Dear ImGui** (`Omar Cornut`, MIT License)、**ImPlot** (`Evan Pezent`, MIT License)、**miniaudio** (`David Reid`, Public Domain / MIT-0)。
   - **Python 版**致谢：**PyQt6** (`Riverbank Computing / The Qt Company`, GNU GPL v3.0)、**pyqtgraph** (`Luke Campagnola`, MIT License)、**NumPy & SciPy** (BSD-3-Clause License)、**PyAudioWPatch** (`Hubert Pham / s0d3s`, MIT License)、**sounddevice** (`Matthias Geier`, MIT License)、**soundfile / libsndfile** (`Bastian Bechtold`, BSD-3-Clause / LGPL-2.1+)、**imageio-ffmpeg / FFmpeg** (BSD-2-Clause / LGPLv2.1+)、**PyInstaller** (GPLv2+ with Bootloader Exception)。
